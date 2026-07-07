@@ -66,19 +66,26 @@ export const HeroSection = () => {
 
             <div className="mt-6 border-l-2 border-[#23404A]/20 pl-5">
               <p className="text-[13px] font-semibold uppercase tracking-[0.16em] text-[#23404A]">
-                +10 anos de experiência em projetos globais
+                +10 anos de experiência em tecnologia, dados e IA
               </p>
 
-              <p className="mt-2 text-[14px] leading-[1.7] text-[#6d655d]">
-                Engenharia de Dados • IA • Machine Learning • MLOps •
-                Plataformas de IA
+              <p className="mt-2 max-w-[560px] text-[14px] leading-[1.7] text-[#6d655d]">
+                Experiência profissional em projetos para grandes operações,
+                envolvendo Engenharia de Dados, IA, Machine Learning, MLOps e
+                Plataformas de IA.
+              </p>
+            </div>
+
+            <div className="mt-8">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#7a7166]">
+                Experiência construída em projetos para
               </p>
 
-              <div className="mt-4 flex flex-wrap gap-2">
+              <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-3">
                 {COMPANIES.map((company) => (
                   <span
                     key={company}
-                    className="rounded-full border border-[#7B4636]/10 bg-[#efe8de]/60 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.14em] text-[#8b8175]"
+                    className="text-[18px] font-semibold tracking-[-0.04em] text-[#5f574f]/75 sm:text-[20px]"
                   >
                     {company}
                   </span>
