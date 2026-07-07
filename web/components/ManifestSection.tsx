@@ -3,10 +3,22 @@
 import React from "react";
 
 const MANIFEST_POINTS = [
-  "Mais sistemas não significam mais inteligência.",
-  "Mais dados não significam melhores decisões.",
-  "Mais automação não significa menos complexidade.",
-  "O que importa é como tudo se conecta.",
+  {
+    text: "Mais sistemas não significam mais inteligência.",
+    payoff: false,
+  },
+  {
+    text: "Mais dados não significam melhores decisões.",
+    payoff: false,
+  },
+  {
+    text: "Mais automação não significa menos complexidade.",
+    payoff: false,
+  },
+  {
+    text: "O que importa é como tudo se conecta.",
+    payoff: true,
+  },
 ];
 
 export const ManifestSection = () => {
@@ -66,11 +78,21 @@ export const ManifestSection = () => {
             <div className="mt-9 grid gap-3 md:grid-cols-2">
               {MANIFEST_POINTS.map((point) => (
                 <div
-                  key={point}
-                  className="rounded-full border border-[#d7c8b7]/15 bg-[#f4efe7]/[0.03] px-5 py-3"
+                  key={point.text}
+                  className={
+                    point.payoff
+                      ? "rounded-full border border-[#d7c8b7]/40 bg-[#f4efe7]/[0.07] px-5 py-3 md:col-span-2"
+                      : "rounded-full border border-[#d7c8b7]/15 bg-[#f4efe7]/[0.03] px-5 py-3"
+                  }
                 >
-                  <p className="text-[14px] leading-[1.6] text-[#d7c8b7]">
-                    {point}
+                  <p
+                    className={
+                      point.payoff
+                        ? "text-[14px] font-semibold leading-[1.6] text-[#f4efe7]"
+                        : "text-[14px] leading-[1.6] text-[#d7c8b7]"
+                    }
+                  >
+                    {point.text}
                   </p>
                 </div>
               ))}
@@ -78,10 +100,17 @@ export const ManifestSection = () => {
 
             <div className="mt-10 border-l border-[#d7c8b7]/25 pl-5">
               <p className="max-w-[760px] text-[20px] font-normal leading-[1.35] tracking-[-0.035em] text-[#f4efe7] md:text-[24px]">
-                A vantagem competitiva não está em adotar tecnologia mais
-                rápido. Está em construir uma operação capaz de transformar
-                tecnologia em resultado.
+                É por isso que não vendemos ferramentas. Projetamos a operação
+                que faz a tecnologia gerar resultado.
               </p>
+
+              <a
+                href="/#how-it-works"
+                className="mt-5 inline-flex items-center gap-1.5 text-[13px] font-medium text-[#d7c8b7] transition-colors duration-300 hover:text-[#f4efe7]"
+              >
+                Veja como isso vira prática
+                <span aria-hidden="true">→</span>
+              </a>
             </div>
           </div>
 

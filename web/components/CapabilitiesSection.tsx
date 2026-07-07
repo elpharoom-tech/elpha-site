@@ -8,43 +8,61 @@ const CAPABILITIES = [
     title: "Processos",
     description:
       "Mapeamos fluxos, regras e gargalos para tornar a operação mais clara, mensurável e escalável.",
+    example:
+      "Ex.: reduzimos um fluxo de aprovação de 6 etapas manuais para 2 etapas com validação automática.",
+    highlight: false,
   },
   {
     number: "02",
     title: "Dados",
     description:
       "Estruturamos dados para transformar informações dispersas em uma base confiável para decisões.",
+    example:
+      "Ex.: unificamos pedidos, financeiro e CRM em uma única base para relatórios diários.",
+    highlight: false,
   },
   {
     number: "03",
     title: "Sistemas",
     description:
       "Conectamos ferramentas, ERPs, CRMs, planilhas e APIs para reduzir silos e retrabalho.",
+    example:
+      "Ex.: integração entre ERP e CRM elimina o lançamento manual de pedidos em duas telas.",
+    highlight: false,
   },
   {
     number: "04",
     title: "Automação",
     description:
       "Automatizamos tarefas repetitivas, repasses, alertas e fluxos operacionais.",
+    example:
+      "Ex.: repasse automático de leads do site para o time comercial via WhatsApp em segundos.",
+    highlight: false,
   },
   {
     number: "05",
     title: "Inteligência Artificial",
     description:
       "Aplicamos IA para interpretar informações, apoiar decisões e acelerar análises com contexto.",
+    example:
+      "Ex.: triagem automática de tickets de suporte por urgência e tema antes de chegar ao time.",
+    highlight: true,
   },
   {
     number: "06",
     title: "Evolução",
     description:
       "Criamos indicadores para acompanhar resultados, ajustar processos e melhorar continuamente.",
+    example:
+      "Ex.: painel semanal de indicadores operacionais substitui reuniões de status manuais.",
+    highlight: false,
   },
 ];
 
 export const CapabilitiesSection = () => {
   return (
     <section
-      id="services"
+      id="capabilities"
       className="
         relative
         scroll-mt-[78px]
@@ -86,22 +104,32 @@ export const CapabilitiesSection = () => {
           {CAPABILITIES.map((capability) => (
             <div
               key={capability.number}
-              className="
+              className={`
                 rounded-[22px]
-                border border-[#7B4636]/10
-                bg-[#efe8de]/60
+                border
                 px-6
                 py-6
                 transition-all
                 duration-300
                 hover:-translate-y-1
-                hover:border-[#23404A]/20
-                hover:bg-[#f1ebe2]
-              "
+                ${
+                  capability.highlight
+                    ? "border-[#23404A]/35 bg-[#efe8de]/90 shadow-sm shadow-[#23404A]/10 hover:border-[#23404A]/50"
+                    : "border-[#7B4636]/10 bg-[#efe8de]/60 hover:border-[#23404A]/20 hover:bg-[#f1ebe2]"
+                }
+              `}
             >
-              <p className="text-[10px] uppercase tracking-[0.20em] text-[#7B4636]">
-                {capability.number}
-              </p>
+              <div className="flex items-center justify-between">
+                <p className="text-[10px] uppercase tracking-[0.20em] text-[#7B4636]">
+                  {capability.number}
+                </p>
+
+                {capability.highlight && (
+                  <span className="rounded-full bg-[#23404A]/10 px-2.5 py-1 text-[9.5px] font-semibold uppercase tracking-[0.14em] text-[#23404A]">
+                    Diferencial
+                  </span>
+                )}
+              </div>
 
               <h3 className="mt-4 text-[21px] font-normal leading-[1.15] tracking-[-0.04em] text-[#191714]">
                 {capability.title}
@@ -110,6 +138,12 @@ export const CapabilitiesSection = () => {
               <p className="mt-3 max-w-[320px] text-[14px] leading-[1.65] text-[#5f574f]">
                 {capability.description}
               </p>
+
+              <div className="mt-4 border-t border-[#7B4636]/10 pt-3">
+                <p className="max-w-[320px] text-[12.5px] italic leading-[1.6] text-[#6d655d]">
+                  {capability.example}
+                </p>
+              </div>
             </div>
           ))}
         </div>

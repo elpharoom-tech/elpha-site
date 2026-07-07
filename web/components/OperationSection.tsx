@@ -5,10 +5,10 @@ import React from "react";
 const INTELLIGENT_OPERATION = [
   "Processos bem definidos",
   "Sistemas conectados",
-  "Dados que geram informação",
-  "Trabalho repetitivo automatizado",
-  "IA aplicada onde realmente importa",
-  "Evolução baseada em indicadores",
+  "Dados organizados",
+  "Automação aplicada com critério",
+  "IA aplicada com contexto",
+  "Evolução guiada por indicadores",
 ];
 
 const BEFORE = [
@@ -19,6 +19,10 @@ const BEFORE = [
   {
     label: "Processos",
     text: "Manuais, lentos e dependentes de improviso.",
+  },
+  {
+    label: "Sistemas",
+    text: "Isolados, sem comunicação entre si.",
   },
   {
     label: "Decisões",
@@ -32,6 +36,10 @@ const BEFORE = [
 
 const AFTER = [
   {
+    label: "Dados",
+    text: "Organizados para apoiar decisões e automações.",
+  },
+  {
     label: "Processos",
     text: "Claros, integrados e mensuráveis.",
   },
@@ -40,8 +48,8 @@ const AFTER = [
     text: "Conectados, trabalhando como um único fluxo.",
   },
   {
-    label: "Dados",
-    text: "Organizados para apoiar decisões e automações.",
+    label: "Decisões",
+    text: "Apoiadas em dados confiáveis, em tempo real.",
   },
   {
     label: "IA",
@@ -124,8 +132,11 @@ export const OperationSection: React.FC = () => {
               </div>
             </div>
 
-            <div className="hidden items-center justify-center lg:flex">
-              <span className="text-[34px] text-[#7B4636]/30">→</span>
+            <div className="flex items-center justify-center py-1 lg:py-0">
+              <span className="text-[28px] text-[#7B4636]/30 lg:hidden">↓</span>
+              <span className="hidden text-[34px] text-[#7B4636]/30 lg:inline">
+                →
+              </span>
             </div>
 
             <div className="rounded-[30px] bg-[#23404A] p-7 text-[#f4efe7] shadow-xl shadow-[#23404A]/15">
