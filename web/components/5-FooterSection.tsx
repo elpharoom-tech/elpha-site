@@ -72,10 +72,10 @@ export const FooterSection = () => {
               </p>
 
               <a
-                href="mailto:contato@elpharoom.com"
+                href="mailto:contato@elpharoom.com.br"
                 className="mt-4 inline-block text-[12px] text-[#7B4636] transition-colors hover:text-[#191714]"
               >
-                contato@elpharoom.com
+                contato@elpharoom.com.br
               </a>
             </div>
 

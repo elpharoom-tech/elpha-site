@@ -261,10 +261,10 @@ export default function PrivacyPage() {
               </p>
 
               <a
-                href="mailto:contato@elpharoom.com?subject=Privacidade%20e%20dados%20pessoais"
+                href="mailto:contato@elpharoom.com.br?subject=Privacidade%20e%20dados%20pessoais"
                 className="mt-4 inline-flex items-center gap-2 text-[13px] font-medium text-[#7B4636] transition-colors hover:text-[#191714]"
               >
-                contato@elpharoom.com
+                contato@elpharoom.com.br
                 <span aria-hidden="true">↗</span>
               </a>
             </div>
