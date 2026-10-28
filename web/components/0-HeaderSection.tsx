@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 const NAV_ITEMS = [
   ["capabilities", "Soluções"],
   ["how-it-works", "Metodologia"],
-  ["applications", "Aplicações"],
 ] as const;
 
 const WHATSAPP_URL =

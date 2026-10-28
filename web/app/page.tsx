@@ -2,8 +2,7 @@ import { HeaderSection } from "@/components/0-HeaderSection";
 import { HeroSection } from "@/components/1-HeroSection";
 import { SolutionsSection } from "@/components/2-SolutionsSection";
 import { MethodologySection } from "@/components/3-MethodologySection";
-import { ApplicationsSection } from "@/components/4-ApplicationsSection";
-import { FooterSection } from "@/components/5-FooterSection";
+import { FooterSection } from "@/components/4-FooterSection";
 
 export default function Home() {
   return (
@@ -15,8 +14,6 @@ export default function Home() {
       <SolutionsSection />
 
       <MethodologySection />
-
-      <ApplicationsSection />
 
       <FooterSection />
     </main>
