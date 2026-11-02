@@ -23,6 +23,8 @@ const trackEvent = (eventName: string, label: string) => {
   }
 };
 
+const COMPANIES = ["Vivo", "Via Varejo", "Santander", "Ambev"];
+
 const DELIVERABLES = [
   {
     number: "01",
@@ -83,10 +85,33 @@ export const HeroSection = () => {
             </h1>
 
             <p className="mt-6 max-w-[510px] text-[15px] leading-[1.85] text-[#5f574f] sm:text-base md:mt-7">
-              Unimos engenharia de dados, analytics, software e automação para
-              simplificar operações, melhorar decisões e transformar desafios de
-              negócio em soluções concretas.
+              Unimos engenharia de dados, analytics, machine learning, software
+              e automação para transformar desafios operacionais em soluções
+              concretas.
             </p>
+
+            {/* Credibilidade e experiência profissional */}
+            <div className="mt-8 border-y border-[#7B4636]/15 py-5">
+              <p className="text-[9px] font-semibold uppercase tracking-[0.19em] text-[#7B4636] sm:text-[10px]">
+                Experiência profissional em grandes empresas
+              </p>
+
+              <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-3">
+                {COMPANIES.map((company) => (
+                  <span
+                    key={company}
+                    className="text-[15px] font-semibold tracking-[-0.04em] text-[#23404A] sm:text-base"
+                  >
+                    {company}
+                  </span>
+                ))}
+              </div>
+
+              <p className="mt-3 max-w-[460px] text-[11px] leading-[1.7] text-[#81766b]">
+                Trajetória profissional em projetos de dados, Machine Learning,
+                engenharia de tecnologia e operações em escala.
+              </p>
+            </div>
 
             {/* Chamadas para ação */}
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
